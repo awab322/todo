@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState , useEffect} from 'react'
 import './Todo.css'
 import TodoList from "./TodoList";
 
@@ -7,8 +7,10 @@ import AddIcon from '@mui/icons-material/Add';
 
 const Todo = () => {
 
+let saved = JSON.parse(localStorage.getItem("newItem")) || []
+
 let[item,setItem]=useState("");
-let[newItem,setNewItem]=useState([]);
+let[newItem,setNewItem]=useState(saved);
 
 
     function itemEvent(aa) 
@@ -31,10 +33,12 @@ let[newItem,setNewItem]=useState([]);
             return prevData.filter((val,index)=>{
                 return index!=ii;
             })
-        })
-        
+        })  
     }
 
+    useEffect(() => {
+        localStorage.setItem("newItem",JSON.stringify(newItem))
+    }, [newItem])
 
     return (
         <>
