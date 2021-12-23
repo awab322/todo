@@ -28,7 +28,6 @@ body{
 
 .todo_heading_style
 {
-  
   color: white;
   background: transparent;
   background-color: #8566aa ;
@@ -40,8 +39,9 @@ body{
   text-align: center;
   display: flex;
   font-size:larger;
-
 }
+
+
 
 .input_data
 {

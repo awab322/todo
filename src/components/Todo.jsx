@@ -53,7 +53,7 @@ let[newItem,setNewItem]=useState(saved);
         <div >
         
             <div className="item_div">
-                <div className="todo_heading_style" style={{marginTop:"20px"}}>
+                <div className="todo_heading_style position-fixed fixed" style={{marginTop:"20px"}}>
                     <p>Items List</p>
                 </div>
                 <ul>
